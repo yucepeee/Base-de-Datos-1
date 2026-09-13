@@ -104,7 +104,7 @@ Relaciona al `Cliente` con el `Agente` que gestiona la entrega. Un cliente puede
 
 El siguiente diagrama muestra las entidades, atributos, relaciones y cardinalidades identificadas durante el análisis del negocio:
 
-![Diagrama entidad-relación](Screenshot%202026-09-13%20140318.png)
+![Diagrama entidad-relación](assets/Screenshot%202026-09-13%20140318.png)
 
 > **Observación:** en la versión actual del modelo, `Páginas Web` aparece como entidad con sus atributos, pero no tiene una relación visible con `Producto`. Si se desea registrar qué productos se publican en cada página, se puede agregar una relación entre ambas entidades.
 
