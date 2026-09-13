@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <style>
+    .entity { fill:#d5e8d4; stroke:#82b366; stroke-width:3; }
+    .attribute { fill:#dae8fc; stroke:#6c8ebf; stroke-width:2; }
+    .relation { fill:#fff2cc; stroke:#d6b656; stroke-width:3; }
+    .line { stroke:#555; stroke-width:2.5; fill:none; }
+    .title { font: bold 28px Arial, sans-serif; fill:#222; }
+    .entity-text { font: bold 22px Arial, sans-serif; fill:#1f1f1f; text-anchor:middle; dominant-baseline:middle; }
+    .attribute-text { font: 17px Arial, sans-serif; fill:#1f1f1f; text-anchor:middle; dominant-baseline:middle; }
+    .relation-text { font: bold 17px Arial, sans-serif; fill:#1f1f1f; text-anchor:middle; dominant-baseline:middle; }
+    .cardinality { font: bold 16px Arial, sans-serif; fill:#444; text-anchor:middle; }
+  </style>
+
+  <text x="700" y="45" class="title" text-anchor="middle">Diagrama Entidad-Relaci&oacute;n - Sistema de comercio electr&oacute;nico</text>
+
+  <!-- Relationship lines -->
+  <path class="line" d="M250 420 L410 420"/>
+  <path class="line" d="M590 420 L690 420"/>
+  <path class="line" d="M870 420 L1030 420"/>
+  <path class="line" d="M770 340 L770 230 L930 230 L930 165"/>
+  <path class="line" d="M470 340 L470 230 L300 230 L300 165"/>
+  <path class="line" d="M300 575 L300 690 L470 690 L470 735"/>
+  <path class="line" d="M1130 500 L1130 610 L1030 610 L1030 735"/>
+
+  <!-- Main entities and relationships -->
+  <rect x="80" y="375" width="170" height="90" class="entity"/>
+  <text x="165" y="420" class="entity-text">Producto</text>
+
+  <polygon points="410,420 500,340 590,420 500,500" class="relation"/>
+  <text x="500" y="420" class="relation-text">Compra</text>
+
+  <rect x="690" y="375" width="180" height="90" class="entity"/>
+  <text x="780" y="420" class="entity-text">Cliente</text>
+
+  <polygon points="1030,420 1100,350 1170,420 1100,490" class="relation"/>
+  <text x="1100" y="420" class="relation-text">Envi&oacute;</text>
+
+  <rect x="1200" y="375" width="150" height="90" class="entity"/>
+  <text x="1275" y="420" class="entity-text">Agente</text>
+
+  <polygon points="470,735 560,655 650,735 560,815" class="relation"/>
+  <text x="560" y="735" class="relation-text">Provee</text>
+
+  <rect x="385" y="90" width="170" height="75" class="entity"/>
+  <text x="470" y="127" class="entity-text">Importadora</text>
+
+  <rect x="845" y="90" width="170" height="75" class="entity"/>
+  <text x="930" y="127" class="entity-text">P&aacute;ginas Web</text>
+
+  <!-- Product attributes -->
+  <ellipse cx="70" cy="265" rx="65" ry="32" class="attribute"/>
+  <text x="70" y="265" class="attribute-text">ID</text>
+  <path class="line" d="M125 280 L150 375"/>
+  <ellipse cx="175" cy="175" rx="75" ry="32" class="attribute"/>
+  <text x="175" y="175" class="attribute-text">Nombre</text>
+  <path class="line" d="M210 195 L165 375"/>
+  <ellipse cx="300" cy="275" rx="78" ry="32" class="attribute"/>
+  <text x="300" y="275" class="attribute-text">Caracter&iacute;sticas</text>
+  <path class="line" d="M270 300 L215 375"/>
+  <ellipse cx="350" cy="365" rx="78" ry="32" class="attribute"/>
+  <text x="350" y="365" class="attribute-text">Nacionalidad</text>
+  <path class="line" d="M290 380 L250 395"/>
+
+  <!-- Client attributes -->
+  <ellipse cx="650" cy="245" rx="65" ry="32" class="attribute"/>
+  <text x="650" y="245" class="attribute-text">Tel&eacute;fono</text>
+  <path class="line" d="M675 270 L730 375"/>
+  <ellipse cx="780" cy="190" rx="60" ry="32" class="attribute"/>
+  <text x="780" y="190" class="attribute-text">C.I.</text>
+  <path class="line" d="M780 222 L780 375"/>
+  <ellipse cx="920" cy="245" rx="95" ry="32" class="attribute"/>
+  <text x="920" y="245" class="attribute-text">Nombre destinatario</text>
+  <path class="line" d="M885 270 L830 375"/>
+
+  <!-- Importer attributes -->
+  <ellipse cx="180" cy="90" rx="75" ry="32" class="attribute"/>
+  <text x="180" y="90" class="attribute-text">Minorista</text>
+  <path class="line" d="M255 105 L385 120"/>
+  <ellipse cx="300" cy="25" rx="60" ry="28" class="attribute"/>
+  <text x="300" y="25" class="attribute-text">Peso</text>
+  <path class="line" d="M345 40 L420 90"/>
+  <ellipse cx="680" cy="90" rx="75" ry="32" class="attribute"/>
+  <text x="680" y="90" class="attribute-text">Mayorista</text>
+  <path class="line" d="M605 105 L555 120"/>
+  <ellipse cx="680" cy="25" rx="65" ry="28" class="attribute"/>
+  <text x="680" y="25" class="attribute-text">Espacio</text>
+  <path class="line" d="M635 40 L530 90"/>
+
+  <!-- Agent attributes -->
+  <ellipse cx="1130" cy="555" rx="65" ry="32" class="attribute"/>
+  <text x="1130" y="555" class="attribute-text">N&uacute;mero</text>
+  <path class="line" d="M1130 523 L1130 490"/>
+  <ellipse cx="1260" cy="555" rx="65" ry="32" class="attribute"/>
+  <text x="1260" y="555" class="attribute-text">Nombre</text>
+  <path class="line" d="M1260 523 L1280 465"/>
+  <ellipse cx="1200" cy="680" rx="55" ry="32" class="attribute"/>
+  <text x="1200" y="680" class="attribute-text">C.I.</text>
+  <path class="line" d="M1180 650 L1160 490"/>
+  <ellipse cx="1030" cy="820" rx="65" ry="32" class="attribute"/>
+  <text x="1030" y="820" class="attribute-text">Ciudad</text>
+  <path class="line" d="M1030 788 L1030 735"/>
+  <ellipse cx="1220" cy="820" rx="85" ry="32" class="attribute"/>
+  <text x="1220" y="820" class="attribute-text">Calle/Barrio</text>
+  <path class="line" d="M1180 800 L1070 750"/>
+
+  <!-- Web attributes -->
+  <ellipse cx="1030" cy="25" rx="60" ry="28" class="attribute"/>
+  <text x="1030" y="25" class="attribute-text">Nombre</text>
+  <path class="line" d="M990 45 L970 90"/>
+  <ellipse cx="1160" cy="25" rx="55" ry="28" class="attribute"/>
+  <text x="1160" y="25" class="attribute-text">Marca</text>
+  <path class="line" d="M1120 45 L1000 90"/>
+  <ellipse cx="1110" cy="190" rx="55" ry="28" class="attribute"/>
+  <text x="1110" y="190" class="attribute-text">NIT</text>
+  <path class="line" d="M1080 175 L1000 155"/>
+  <ellipse cx="1250" cy="190" rx="75" ry="28" class="attribute"/>
+  <text x="1250" y="190" class="attribute-text">Nacionalidad</text>
+  <path class="line" d="M1190 175 L1010 150"/>
+
+  <!-- Cardinalities -->
+  <text x="300" y="405" class="cardinality">N:M</text>
+  <text x="630" y="405" class="cardinality">N:M</text>
+  <text x="950" y="405" class="cardinality">N:M</text>
+  <text x="390" y="245" class="cardinality">N:M</text>
+  <text x="850" y="215" class="cardinality">1:N</text>
+  <text x="360" y="675" class="cardinality">1:N</text>
+  <text x="1080" y="595" class="cardinality">N:M</text>
+</svg>
