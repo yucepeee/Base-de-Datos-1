@@ -138,7 +138,7 @@ El diagrama E-R muestra las entidades, atributos, relaciones y cardinalidades id
 
 El diagrama UML representa las clases principales del sistema, sus atributos, operaciones y algunas relaciones de especialización y asociación:
 
-![Diagrama UML](assets/Diagrama%20UML.drawio.png)
+![Diagrama UML](assets/Diagrama%20UML.drawio%20(1).png)
 
 > **Observaciones del modelo:** `PaginaWeb` aparece como entidad o clase, pero todavía no tiene una relación claramente definida con `Producto`. Además, el UML contiene una representación repetida de algunas clases. Antes de implementar la base de datos, conviene consolidar esas clases y definir si cada producto puede publicarse en una o varias páginas web.
 
