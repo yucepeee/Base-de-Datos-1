@@ -132,7 +132,7 @@ El `Inventario` consiste en la gestión del stock disponible de cada producto, i
 
 El diagrama E-R muestra las entidades, atributos, relaciones y cardinalidades identificadas durante el análisis del negocio:
 
-![Diagrama entidad-relación](assets/Diagrama%20E-R.drawio.png)
+![Diagrama entidad-relación](assets/Diagrama%20E-R-cortado.png)
 
 ### Diagrama UML
 
