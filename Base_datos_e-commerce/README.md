@@ -34,7 +34,7 @@ Diseñar una base de datos que permita:
 - Identificar la modalidad de importación utilizada: peso, unidad o espacio dentro de un contenedor.
 - Gestionar las compras realizadas por los clientes.
 - Registrar los datos del agente responsable de cada envío.
-- Administrar el inventario y la información de las páginas web utilizadas por el negocio.
+- Monitorear el stock disponible de cada producto y su disponibilidad para la venta.
 
 ## 3. 🧩 Entidades y atributos
 
@@ -87,7 +87,7 @@ Representa a la persona encargada de realizar o gestionar la entrega de un pedid
 
 ### 📊 Inventario
 
-Representa el conjunto de productos disponibles y permite consultarlos por nacionalidad o por tipo de importadora.
+Se considera una función de gestión del stock de los productos, no una entidad independiente del modelo. La disponibilidad se administra por tipo de producto, identificando cada artículo según su nombre o modelo, sin considerar nacionalidad ni otra clasificación como criterio principal.
 
 ### 🧾 Compra
 
@@ -113,11 +113,11 @@ Relaciona al `Cliente` con el `Agente` que gestiona la entrega. Un cliente puede
 
 ### 📊 Inventario
 
-El `Inventario` contiene los productos disponibles y permite filtrarlos por nacionalidad o por tipo de importadora, de acuerdo con las operaciones mostradas en el diagrama UML.
+El `Inventario` consiste en la gestión del stock disponible de cada producto, identificado principalmente por su nombre o modelo. Las consultas se concentran en la disponibilidad del artículo y no en segmentaciones por nacionalidad ni en otros criterios ajenos al tipo de producto.
 
 ## 5. 📋 Reglas del negocio
 
-1. Cada producto debe contar con un identificador único y una cantidad disponible en inventario.
+1. Cada producto debe contar con un identificador único, un nombre o modelo y una cantidad disponible en stock.
 2. Los productos deben publicarse en un catálogo accesible desde las páginas web del negocio.
 3. Un cliente puede comprar uno o varios productos y cada compra debe registrar la cantidad adquirida.
 4. Una importadora puede proveer uno o varios productos.
@@ -138,11 +138,11 @@ El diagrama E-R muestra las entidades, atributos, relaciones y cardinalidades id
 
 El diagrama UML representa las clases principales del sistema, sus atributos, operaciones y algunas relaciones de especialización y asociación:
 
-![Diagrama UML](assets/Diagrama%20UML.drawio%20(1).png)
+![Diagrama UML](assets/Diagrama%20UML.drawio.png)
 
-> **Observaciones del modelo:** `PaginaWeb` aparece como entidad o clase, pero todavía no tiene una relación claramente definida con `Producto`. Además, el UML contiene una representación repetida de algunas clases. Antes de implementar la base de datos, conviene consolidar esas clases y definir si cada producto puede publicarse en una o varias páginas web.
+> **Observaciones del modelo:** `PaginaWeb` se interpreta como una entidad asociada al catálogo o publicación de productos, sin constituir una entidad fuerte del negocio por sí sola. El inventario se representa como una funcionalidad de gestión sobre el stock de `Producto`, en lugar de una entidad independiente. La relación entre `Producto` y `PaginaWeb` debe definirse como publicación de un catálogo o disponibilidad en una o varias plataformas.
 
 ## 7. ✅ Conclusión
 
-El modelo entidad-relación organiza la información esencial del negocio de comercio electrónico y establece cómo se relacionan los productos, clientes, importadoras, páginas web y agentes de envío. El diagrama UML complementa este modelo al representar las clases, operaciones y especializaciones relacionadas con el inventario, las compras y los envíos. Ambos diseños constituyen una base para transformar el modelo conceptual en un modelo lógico y posteriormente implementarlo en un sistema gestor de bases de datos.
+El modelo entidad-relación organiza la información esencial del negocio de comercio electrónico y establece cómo se relacionan los productos, clientes, importadoras, páginas web y agentes de envío. El diagrama UML complementa este modelo al representar las clases, operaciones y especializaciones relacionadas con la compra, la entrega y la gestión del stock de los productos. Ambos diseños constituyen una base para transformar el modelo conceptual en un modelo lógico y posteriormente implementarlo en un sistema gestor de bases de datos.
 
