@@ -120,6 +120,49 @@ Representa la compra de un producto realizada por ekl cliente e incluye la canti
 
 Representa la entrega solicitada por un cliente e incluye el código de seguimiento.
 
+## 4. 🔗 Relaciones
+
+### 📥 Provee
+
+Relaciona una `Importadora` con los `Productos` que suministra. Una importadora puede proveer varios productos y un producto puede ser provisto por varias importadoras, de acuerdo con la cardinalidad **N:M** del diagrama E-R. En el diagrama UML, `Minorista` y `Mayorista` especializan a `Importadora`.
+
+### 🛍️ Compra
+
+Relaciona un `Cliente` con los `Productos` que adquiere. Un cliente puede realizar varias compras y un producto puede formar parte de las compras de varios clientes. La clase `Compra` registra la cantidad adquirida y representa esta relación **N:M**.
+
+### 📦 Envío
+
+Relaciona al `Cliente` con el `Agente` que gestiona la entrega. Un cliente puede recibir varios envíos y un agente puede encargarse de envíos para varios clientes. La clase `Envio` registra los datos de seguimiento y la relación se representa con cardinalidad **N:M** en el diagrama E-R.
+
+### 📊 Inventario
+
+El `Inventario` consiste en la gestión del stock disponible de cada producto, identificado principalmente por su nombre o modelo. Las consultas se concentran en la disponibilidad del artículo y no en segmentaciones por nacionalidad ni en otros criterios ajenos al tipo de producto.
+
+## 5. 📋 Reglas del negocio
+
+1. Cada producto debe contar con un identificador único, un nombre o modelo y una cantidad disponible en stock.
+2. Los productos deben publicarse en un catálogo accesible desde las páginas web del negocio.
+3. Un cliente puede comprar uno o varios productos y cada compra debe registrar la cantidad adquirida.
+4. Una importadora puede proveer uno o varios productos.
+5. La importación puede gestionarse por peso, por unidad o por espacio dentro de un contenedor.
+6. Los pedidos pueden ser recogidos por el cliente o entregados mediante envío.
+7. Para realizar un envío se deben registrar los datos del destinatario, la ubicación de entrega y el código de seguimiento.
+8. El agente debe identificarse mediante su número, nombre y documento de identidad.
+
+## 6. 🗺️ Diagramas del sistema
+
+### Diagrama entidad-relación
+
+El diagrama E-R muestra las entidades, atributos, relaciones y cardinalidades identificadas durante el análisis del negocio:
+
+![Diagrama entidad-relación](assets/Diagrama%20E-R-cortado.png)
+
+### Diagrama UML
+
+El diagrama UML representa las clases principales del sistema, sus atributos, operaciones y algunas relaciones de especialización y asociación:
+
+![Diagrama UML](assets/Diagrama%20UML.drawio.png)
+
 ## 📐 FASE 2: Diseño Lógico y Normalización
 
 ### 1. Normalización de Tablas (1FN, 2FN, 3FN)
