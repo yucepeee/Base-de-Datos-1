@@ -172,12 +172,3 @@ A continuación, se demuestra el proceso de normalización aplicado al esquema r
 |  | `ci_agente` | VARCHAR(20) | FK, NOT NULL | Agente asignado para la entrega. | 
 |  | `codigo_seguimiento` | VARCHAR(100) | NOT NULL, UNIQUE | Código de rastreo del paquete. | 
 
-## Autor
-
-* **Nombre:** Gabriel Romulo Arnez Joven
-
-* **Registro:** 220000417
-
-* **Materia:** Base de Datos 1
-
-* **Docente:** Ing. Juan Carlos Peinado Pereira
