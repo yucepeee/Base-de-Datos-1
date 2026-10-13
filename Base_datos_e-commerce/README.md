@@ -126,6 +126,10 @@ Representa la entrega solicitada por un cliente e incluye el código de seguimie
 
 Relaciona una `Importadora` con los `Productos` que suministra. Una importadora puede proveer varios productos y un producto puede ser provisto por varias importadoras, de acuerdo con la cardinalidad **N:M** del diagrama E-R. En el diagrama UML, `Minorista` y `Mayorista` especializan a `Importadora`.
 
+### 🌐 Origen web
+
+Relaciona una `Página Web` con los `Productos` que se originan en ella. Una página web puede ser el origen de varios productos, mientras que cada producto se origina en una sola página web; por tanto, la relación tiene cardinalidad **1:N**.
+
 ### 🛍️ Compra
 
 Relaciona un `Cliente` con los `Productos` que adquiere. Un cliente puede realizar varias compras y un producto puede formar parte de las compras de varios clientes. La clase `Compra` registra la cantidad adquirida y representa esta relación **N:M**.
@@ -134,9 +138,7 @@ Relaciona un `Cliente` con los `Productos` que adquiere. Un cliente puede realiz
 
 Relaciona al `Cliente` con el `Agente` que gestiona la entrega. Un cliente puede recibir varios envíos y un agente puede encargarse de envíos para varios clientes. La clase `Envio` registra los datos de seguimiento y la relación se representa con cardinalidad **N:M** en el diagrama E-R.
 
-### 📊 Inventario
 
-El `Inventario` consiste en la gestión del stock disponible de cada producto, identificado principalmente por su nombre o modelo. Las consultas se concentran en la disponibilidad del artículo y no en segmentaciones por nacionalidad ni en otros criterios ajenos al tipo de producto.
 
 ## 5. 📋 Reglas del negocio
 
@@ -214,4 +216,3 @@ A continuación, se demuestra el proceso de normalización aplicado al esquema r
 |  | `ci_cliente` | VARCHAR(20) | FK, NOT NULL | Cliente destinatario del envío. | 
 |  | `ci_agente` | VARCHAR(20) | FK, NOT NULL | Agente asignado para la entrega. | 
 |  | `codigo_seguimiento` | VARCHAR(100) | NOT NULL, UNIQUE | Código de rastreo del paquete. | 
-
